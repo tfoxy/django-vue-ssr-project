@@ -1,0 +1,19 @@
+{
+  "name": "django-vue-ssr-project",
+  "version": "1.0.0",
+  "description": "Django project using Vue server side rendering",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "vue": "^2.4.4",
+    "vue-loader": "^13.0.5",
+    "vue-router": "^2.7.0",
+    "vue-server-renderer": "^2.4.4",
+    "vue-style-loader": "^3.0.3"
+  }
+}
