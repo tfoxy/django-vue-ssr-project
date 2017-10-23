@@ -1,5 +1,9 @@
 from django.shortcuts import render
+from vue import render as vue_render
 
 
 def home(request):
-    return render(request, 'home.html')
+    content = vue_render('home')
+    return render(request, 'home.html', {
+        'content': content,
+    })
