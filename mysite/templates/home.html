@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,6 +6,12 @@
   <title>Home</title>
 </head>
 <body>
-  <div>Hello world</div>
+  {{ content|safe }}
+  <!--
+  <script src="{% static 'home.js' %}"></script>
+  <script>
+      vueApp.$mount('#app');
+  </script>
+  -->
 </body>
 </html>
