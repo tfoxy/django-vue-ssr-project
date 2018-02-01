@@ -4,14 +4,13 @@
 <head>
   <meta charset="utf-8">
   <title>Home</title>
+  <link href="{% static 'build/home.css' %}" rel="stylesheet" />
 </head>
 <body>
   {{ content|safe }}
-  <!--
-  <script src="{% static 'home.js' %}"></script>
+  <script src="{% static 'build/home.js' %}"></script>
   <script>
-      vueApp.$mount('#app');
+      app.$mount('#app');
   </script>
-  -->
 </body>
 </html>

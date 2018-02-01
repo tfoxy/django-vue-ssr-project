@@ -1,2 +1,2 @@
-django==1.11.6
+django==1.11.10
 react==4.1.1

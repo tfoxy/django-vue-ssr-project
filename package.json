@@ -2,18 +2,30 @@
   "name": "django-vue-ssr-project",
   "version": "1.0.0",
   "description": "Django project using Vue server side rendering",
-  "main": "index.js",
+  "main": "render_server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node render_server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "webpack --config webpack.config.server.js",
+    "build:client": "webpack --config webpack.config.client.js"
   },
   "author": "",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "vue": "^2.5.3",
-    "vue-loader": "^13.4.0",
-    "vue-router": "^2.8.1",
-    "vue-server-renderer": "^2.5.3",
-    "vue-style-loader": "^3.0.3"
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "vue": "^2.5.13",
+    "vue-server-renderer": "^2.5.13"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "vue-loader": "^13.7.1",
+    "vue-style-loader": "^3.1.2",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
   }
 }
