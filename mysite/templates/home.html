@@ -1,4 +1,4 @@
-{% load static %}
+{% load json static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,7 +10,7 @@
   {{ content|safe }}
   <script src="{% static 'build/home.js' %}"></script>
   <script>
-      app.$mount('#app');
+      app({{ js_context|scriptjson }}).$mount('#app');
   </script>
 </body>
 </html>

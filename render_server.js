@@ -18,8 +18,8 @@ app.get('/', function(req, res) {
 app.post('/render', (req, res) => {
   const body = req.body;
   // body.serializedProps
-  const app = require(body.path);
-  renderer.renderToString(app, (err, markup) => {
+  const createApp = require(body.path);
+  renderer.renderToString(createApp(body.serializedProps), (err, markup) => {
     if (err) {
       res.json({
         error: {
